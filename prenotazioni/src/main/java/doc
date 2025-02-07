@@ -1,0 +1,28 @@
+classe Postazione
+Long id
+String descrizione
+Stato enum tipo, enum stato
+int numeromassimo occupanti,
+Edificio edificio
+List<Utente> utenti
+
+classe edificio
+Long id
+String nome
+String indirizzo
+String città
+
+
+classe Utente
+Long id
+String Username
+String nomeCompleto
+String email
+List<Postazione> postazioni
+
+classe Prenotazione
+Long id
+Utente @manyToOne
+Postazione @manyToOne
+LocalData data
+LocalDate dataScadenza (+1gg)
